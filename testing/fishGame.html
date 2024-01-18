@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#tank {
+  width: 500px;
+  height: 300px;
+  background-color: #0000FF;
+  position: relative;
+  overflow: hidden;
+}
+
+#fish {
+  width: 50px;
+  height: 20px;
+  background-color: #FFA500;
+  position: absolute;
+  top: 50%;
+  animation: swim 5s linear infinite;
+}
+
+@keyframes swim {
+  0% { left: -50px; }
+  100% { left: 550px; }
+}
+
+.bubble {
+  width: 10px;
+  height: 10px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  animation: bubble 5s linear infinite;
+}
+
+@keyframes bubble {
+  0% { bottom: 0; }
+  100% { bottom: 300px; }
+}
+
+#seaweed {
+  width: 20px;
+  height: 50px;
+  background-color: #008000;
+  position: absolute;
+  bottom: 0;
+}
+</style>
+<script>
+window.onload = function() {
+  var fish = document.getElementById('fish');
+  var bubbles = document.getElementsByClassName('bubble');
+  var speed = 5;
+  var fishPos = { x: 0, y: 0 };
+
+  function keydownHandler(e) {
+    switch(e.key) {
+      case 'ArrowUp':
+        fishPos.y -= speed;
+        break;
+      case 'ArrowDown':
+        fishPos.y += speed;
+        break;
+      case 'ArrowLeft':
+        fishPos.x -= speed;
+        break;
+      case 'ArrowRight':
+        fishPos.x += speed;
+        break;
+    }
+    fish.style.top = fishPos.y + 'px';
+    fish.style.left = fishPos.x + 'px';
+  }
+
+  function checkCollision() {
+    var fishRect = fish.getBoundingClientRect();
+    for (var i = 0; i < bubbles.length; i++) {
+      var bubbleRect = bubbles[i].getBoundingClientRect();
+      if (fishRect.x < bubbleRect.x + bubbleRect.width &&
+          fishRect.x + fishRect.width > bubbleRect.x &&
+          fishRect.y < bubbleRect.y + bubbleRect.height &&
+          fishRect.y + fishRect.height > bubbleRect.y) {
+        // Collision detected! End the game.
+        alert('Game over!');
+        window.location.reload();
+      }
+    }
+  }
+
+  window.addEventListener('keydown', keydownHandler);
+  setInterval(checkCollision, 100);
+}
+</script>
+</head>
+<body>
+
+<div id="tank">
+  <div id="fish"></div>
+  <div class="bubble" style="left: 100px; animation-duration: 4s;"></div>
+  <div class="bubble" style="left: 200px; animation-duration: 3s;"></div>
+  <div class="bubble" style="left: 300px; animation-duration: 2s;"></div>
+  <div class="bubble" style="left: 400px; animation-duration: 5s;"></div>
+  <div id="seaweed" style="left: 50px;"></div>
+  <div id="seaweed" style="left: 150px;"></div>
+  <div id="seaweed" style="left: 250px;"></div>
+  <div id="seaweed" style="left: 350px;"></div>
+  <div id="seaweed" style="left: 450px;"></div>
+</div>
+
+</body>
+</html>
