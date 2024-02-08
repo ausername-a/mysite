@@ -1,38 +1,95 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>5 Things to Know About Rattlesnakes and Their Babies</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        .logo {
+            width: 452;
+            height: 70px;
+        }
+        .main {
+            display: flex;
+            flex: 1;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-<img src="UniversityLogo.png" alt="Logo of The University of Arizona.">
-<h1>5 Things to Know About Rattlesnakes and Their Babies</h1>
-<p> tag with content: UA College of Pharmacy | Aug. 6, 2014</p>
-<p>Arguably, snake season is year-round in Arizona, a state known for its rattlers. But baby rattlesnakes are born in July and August, making these two months especially dangerous for hikers, gardeners, children and others at high risk of exposure to rattlesnake bites.</p>
-<img src="SnakeBite.jpg" alt="Snake bite on side of child's foot">
-<p>So far this year, 74 rattlesnake bites to humans have been reported to the Arizona Poison and Drug Information Center. Based at the University of Arizona College of Pharmacy, the center serves the entire state of Arizona with the exception of Maricopa County, providing free and confidential poison and medication information to callers around the clock.</p>
-<p>Specialists answering the phones at the center regularly receive calls from Arizonans of all ages who don't realize they were bitten by a rattler. The poison center urges anyone who feels a mysterious sting, pinch or bite while outdoors to immediately call the center at 800-222-1222.</p>
-<p>"We will ask a few questions that will help you either identify possible snakebite or eliminate it," said Keith Boesen, director of the Arizona Poison and Drug Information Center. "With snakebite, the sooner the medical treatment, the better the outcome, so calling us right away can make a very big difference for the victims and the medical teams treating them."</p>
-<p>The center advises anyone who might come cross paths with rattlesnakes to be aware of these five things:</p>
-<ol>
-    <li>Baby rattlesnakes range in length from 6 to 12 inches and are easily camouflaged by brush and grass.</li>
-    <li>Baby rattlesnakes are rattleless until they first shed their skins, so there will be no infamous "chica-chica" sound before they strike.</li>
-    <li>Despite their impish size, baby snakes have enough venom to be very dangerous if they bite a human.</li>
-    <li>Adult rattlesnakes do not always rattle an audible warning before or while they are biting.</li>
-    <li>It's a good idea to call the poison center if you notice an unidentified small cut or wound, even if you feel no pain. With the lack of telltale rattle warning, people can be bitten without knowing what has happened until they notice their symptoms and attribute them to a snakebite.</li>
-</ol>
-<hr>
-<ul>
-    <li><a href="#top">Home Page</a></li>
-    <li><a href="hometown.html">Visit My Hometown Page</a></li>
-    <li><a href="gallery.html">See My Photo Gallery</a></li>
-    <li><a href="poem.html">Poem by Emily Dickinson</a></li>
-</ul>
-<p>
-<hr>
+    <div class="header">
+        <img class="logo" src="UniversityLogo.png" alt="Logo">
+        <nav>
+    <a href="index.html">Home Page</a> |
+    <a href="hometown.html">Hometown</a> |
+    <a href="gallery.html">Gallery</a> |
+    <a href="poem.html">Poem</a> |
+    <a href="https://www.medium.com/">Link5 (External Site)</a>
+</nav>
+
+    </div>
+    <div class="main">
+        <div class="sidebar">
+            <h2>Contact Us</h2>
+            <form action="contact.php" method="post">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" cols="20"></textarea><br>
+                <input type="submit" value="Submit">
+            </form>
+            <p><a href="Calendar.html">View Calendar</a></p>
+            <a class="follow frss fd_lk" href="https://www.feedspot.com/infiniterss.php?_src=followbtn&amp;followfeedid=15793&amp;q=site:http%3A%2F%2Ffeeds.bbci.co.uk%2Fnews%2Fworld%2Frss.xml" target="_blank">+ Follow RSS <br>(Demonstration purposes only)</a>
+        </div>
+        <div class="content">
+    <h1>5 Things to Know About Rattlesnakes and Their Babies</h1>
+    <p>UA College of Pharmacy | Aug. 6, 2014</p>
+    <p>Arguably, snake season is year-round in Arizona, a state known for its rattlers. But baby rattlesnakes are born in July and August, making these two months especially dangerous for hikers, gardeners, children and others at high risk of exposure to rattlesnake bites.</p>
+    <img src="SnakeBite.jpg" alt="Snake bite on side of child's foot">
+    <p>So far this year, 74 rattlesnake bites to humans have been reported to the Arizona Poison and Drug Information Center. Based at the University of Arizona College of Pharmacy, the center serves the entire state of Arizona with the exception of Maricopa County, providing free and confidential poison and medication information to callers around the clock.</p>
+    <p>Specialists answering the phones at the center regularly receive calls from Arizonans of all ages who don't realize they were bitten by a rattler. The poison center urges anyone who feels a mysterious sting, pinch or bite while outdoors to immediately call the center at 800-222-1222.</p>
+    <p>"We will ask a few questions that will help you either identify possible snakebite or eliminate it," said Keith Boesen, director of the Arizona Poison and Drug Information Center. "With snakebite, the sooner the medical treatment, the better the outcome, so calling us right away can make a very big difference for the victims and the medical teams treating them."</p>
+    <p>The center advises anyone who might come cross paths with rattlesnakes to be aware of these five things:</p>
+    <ol>
+        <li>Baby rattlesnakes range in length from 6 to 12 inches and are easily camouflaged by brush and grass.</li>
+        <li>Baby rattlesnakes are rattleless until they first shed their skins, so there will be no infamous "chica-chica" sound before they strike.</li>
+        <li>Despite their impish size, baby snakes have enough venom to be very dangerous if they bite a human.</li>
+        <li>Adult rattlesnakes do not always rattle an audible warning before or while they are biting.</li>
+        <li>It's a good idea to call the poison center if you notice an unidentified small cut or wound, even if you feel no pain. With the lack of telltale rattle warning, people can be bitten without knowing what has happened until they notice their symptoms and attribute them to a snakebite.</li>
+    </ol>
+</div>
+    </div>
+    <div class="footer">
+    <hr>
     <a href="https://twitter.com/">Twitter</a> |
     <a href="https://www.facebook.com/">Facebook</a> |
     <a href="https://www.linkedin.com/">LinkedIn</a>
-</p>
+</div>
+
 </body>
 </html>

@@ -1,11 +1,73 @@
+
 <!DOCTYPE html>
-<html lang="en">
 <html>
 <head>
-    <title>South Fayette, PA</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        .logo {
+            width: 452;
+            height: 70px;
+        }
+        .main {
+            display: flex;
+            flex: 1;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-<h1>South Fayette, PA</h1>
+    <div class="header">
+        <img class="logo" src="UniversityLogo.png" alt="Logo">
+        <nav>
+    <a href="index.html">Home Page</a> |
+    <a href="hometown.html">Hometown</a> |
+    <a href="gallery.html">Gallery</a> |
+    <a href="poem.html">Poem</a> |
+    <a href="https://www.medium.com/">Link5 (External Site)</a>
+</nav>
+
+    </div>
+    <div class="main">
+        <div class="sidebar">
+            <h2>Contact Us</h2>
+            <form action="contact.php" method="post">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" cols="20"></textarea><br>
+                <input type="submit" value="Submit">
+            </form>
+            <p><a href="Calendar.html">View Calendar</a></p>
+            <a class="follow frss fd_lk" href="https://www.feedspot.com/infiniterss.php?_src=followbtn&amp;followfeedid=15793&amp;q=site:http%3A%2F%2Ffeeds.bbci.co.uk%2Fnews%2Fworld%2Frss.xml" target="_blank">+ Follow RSS <br>(Demonstration purposes only)</a>
+        </div>
+        <div class="content">
+    <h1>South Fayette, PA</h1>
 
 <section>
     <h2>Location</h2>
@@ -36,13 +98,15 @@
         <li>Visit the library</li>
     </ul>
 </section>
-<ul>
+    </ol>
+</div>
+    </div>
+    <div class="footer">
     <hr>
-    <li><a href="index.html">Home Page</a></li>
-    <li><a href="hometown.html">Visit My Hometown Page</a></li>
-    <li><a href="gallery.html">See My Photo Gallery</a></li>
-    <li><a href="poem.html">Poem by Emily Dickinson</a></li>
-    <hr>
-</ul>
+    <a href="https://twitter.com/">Twitter</a> |
+    <a href="https://www.facebook.com/">Facebook</a> |
+    <a href="https://www.linkedin.com/">LinkedIn</a>
+</div>
+
 </body>
 </html>
